@@ -1,0 +1,29 @@
+{
+  "name": "hello",
+  "version": "0.0.1",
+  "summary": "A short description of hello.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "http://EXAMPLE/hello",
+  "license": {
+    "type": "MIT",
+    "file": "FILE_LICENSE"
+  },
+  "authors": {
+    "oneRain": "onerain88@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/oneRain/hello.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "hello",
+    "hello/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

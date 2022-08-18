@@ -1,0 +1,16 @@
+PODS:
+  - hello (0.0.1)
+
+DEPENDENCIES:
+  - hello (from `~/UnityProjects/SDKSkeleton/iOSProject/hello`)
+
+EXTERNAL SOURCES:
+  hello:
+    :path: "~/UnityProjects/SDKSkeleton/iOSProject/hello"
+
+SPEC CHECKSUMS:
+  hello: 189438ac16dd45b9be2bcafbc1c9faa5184addfe
+
+PODFILE CHECKSUM: f2e6d60e21ecc6a50e5d28b288e63fa9c86dd99e
+
+COCOAPODS: 1.11.2
