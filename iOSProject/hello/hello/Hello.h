@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)showDialog;
 
++ (void)call;
+
++ (void)callAsync:(void(^)(int))callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

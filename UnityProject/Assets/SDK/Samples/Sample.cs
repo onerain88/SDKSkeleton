@@ -10,6 +10,15 @@ public class Sample : MonoBehaviour {
 
         Button dialogBtn = transform.Find("Container/Dialog").GetComponent<Button>();
         dialogBtn.onClick.AddListener(OnDialogClicked);
+
+        Button runInBackgroundBtn = transform.Find("Container/Call").GetComponent<Button>();
+        runInBackgroundBtn.onClick.AddListener(OnCallClicked);
+
+        Button callbackBtn = transform.Find("Container/Callback").GetComponent<Button>();
+        callbackBtn.onClick.AddListener(OnCallbackClicked);
+
+        Button callAsyncBtn = transform.Find("Container/CallAsync").GetComponent<Button>();
+        callAsyncBtn.onClick.AddListener(OnCallAsyncClicked);
     }
 
     private void OnPrintClicked() {
@@ -18,5 +27,18 @@ public class Sample : MonoBehaviour {
 
     private void OnDialogClicked() {
         Hello.ShowDialog();
+    }
+
+    private void OnCallClicked() {
+        Hello.Call();
+    }
+
+    private void OnCallbackClicked() {
+        Hello.Callback();
+    }
+
+    private async void OnCallAsyncClicked() {
+        int rand = await Hello.CallAsync();
+        Debug.Log($"Call async rand: {rand}");
     }
 }

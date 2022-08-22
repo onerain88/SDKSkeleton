@@ -15,3 +15,23 @@ void _Print(const char* message) {
 void _ShowDialog() {
     [Hello showDialog];
 }
+
+void _Call() {
+	[Hello call];
+}
+
+typedef void (*OnMessage)(const char* message);
+
+void _RegisterHelloCallback(OnMessage func) {
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        func("I am from iOS.");
+    });
+}
+
+typedef void (*OnRandom)(int rand);
+
+void _RegisterRandomCallback(OnRandom func) {
+    [Hello callAsync:^(int rand) {
+        func(rand);
+    }];
+}

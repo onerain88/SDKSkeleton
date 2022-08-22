@@ -20,4 +20,14 @@
     [alertView show];
 }
 
++ (void)call {
+    NSLog(@"%d", [NSThread isMainThread]);
+    NSLog(@"%@", [NSThread mainThread].name);
+}
+
++ (void)callAsync:(void (^)(int))callback {
+    int rand = arc4random();
+    callback(rand);
+}
+
 @end

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 
 public class Hello
 {
@@ -19,5 +20,17 @@ public class Hello
 
     public static void ShowDialog() {
         platformWrapper?.ShowDialog();
+    }
+
+    public static void Call() {
+        platformWrapper?.Call();
+    }
+
+    public static void Callback() {
+        platformWrapper?.Callback();
+    }
+
+    public static Task<int> CallAsync() {
+        return platformWrapper?.CallAsync();
     }
 }
